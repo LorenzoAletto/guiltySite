@@ -3,8 +3,8 @@ import Header from './components/header';
 
 function App() {
   return (
-    <div>
-      <Header/>     
+    <div className="bg-gray-400 min-h-screen ">
+      <Header/>  
     </div>
 
   );
