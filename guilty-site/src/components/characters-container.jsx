@@ -58,9 +58,9 @@ export default function CharactersContainer() {
    
     return (
         <div>
-            <div className="Home-characters-card">Characters</div>
+            <div className="max-w-[61%] mx-auto bg-red-600 text-white text-center rounded">Characters</div>
             <div>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", maxWidth: "70%", margin: "0 auto", justifyContent: "center"}}>
+                <div className="flex flex-wrap gap-2 max-w-[60%] mx-auto justify-center">
                         {characters.map((character, index) => (
                             <span key={index} style={{ border: "1px solid #ccc", padding: "5px 10px", borderRadius:border,maxWidth: minMax, maxHeight: minMax, minHeight: minMax, minWidth: minMax, display: "flex", justifyContent: "center", alignItems: "center"}}>
                                  <a href={toURL(character)}><img src="/sol-chicomalo.png" alt="" style={{maxWidth: minMax, maxHeight: minMax, borderRadius: border}}/></a>
