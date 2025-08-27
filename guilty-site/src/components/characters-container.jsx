@@ -53,19 +53,18 @@ export default function CharactersContainer() {
         );
     };
 
+    const minMax = '80px'
+
     return (
         <div>
             <div className="Home-characters-card">Characters</div>
-            <div className="text-align-center">
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", maxWidth: "50%", margin: "0 auto" }}>
-
-                    <p>
+            <div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", maxWidth: "70%", margin: "0 auto"}}>
                         {characters.map((character, index) => (
-                            <span key={index} style={{ border: "1px sold #ccc", padding: "5px 10px", borderRadius:"8px"}}>
-                                {character} <a href={toURL(character)}>þ</a>
+                            <span key={index} style={{ border: "1px solid #ccc", padding: "5px 10px", borderRadius:"8px",maxWidth: minMax, maxHeight: minMax, minHeight: minMax, minWidth: minMax}}>
+                                {character} <a href={toURL(character)}><img src="/logo192.png" alt="" style={{maxWidth: minMax, maxHeight: minMax}}/></a>
                             </span>
                         ))}
-                    </p>
                 </div>
             </div>
         </div>
