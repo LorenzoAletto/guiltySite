@@ -52,17 +52,18 @@ export default function CharactersContainer() {
                 .replace(/^-+|-+$/g, "")
         );
     };
-
+    ///Most used parameters
     const minMax = '80px'
-
+    const border = '8px'
+   
     return (
         <div>
             <div className="Home-characters-card">Characters</div>
             <div>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", maxWidth: "70%", margin: "0 auto"}}>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", maxWidth: "70%", margin: "0 auto", justifyContent: "center"}}>
                         {characters.map((character, index) => (
-                            <span key={index} style={{ border: "1px solid #ccc", padding: "5px 10px", borderRadius:"8px",maxWidth: minMax, maxHeight: minMax, minHeight: minMax, minWidth: minMax}}>
-                                {character} <a href={toURL(character)}><img src="/logo192.png" alt="" style={{maxWidth: minMax, maxHeight: minMax}}/></a>
+                            <span key={index} style={{ border: "1px solid #ccc", padding: "5px 10px", borderRadius:border,maxWidth: minMax, maxHeight: minMax, minHeight: minMax, minWidth: minMax, display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                 <a href={toURL(character)}><img src="/sol-chicomalo.png" alt="" style={{maxWidth: minMax, maxHeight: minMax, borderRadius: border}}/></a>
                             </span>
                         ))}
                 </div>
