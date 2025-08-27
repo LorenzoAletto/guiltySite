@@ -44,12 +44,12 @@ export default function CharactersContainer() {
     ];
 
     const toURL = (name) => {
-        return(
+        return (
 
             "/" + name
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/gi, "-")
-            .replace(/^-+|-+$/g, "")
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/gi, "-")
+                .replace(/^-+|-+$/g, "")
         );
     };
 
@@ -57,13 +57,16 @@ export default function CharactersContainer() {
         <div>
             <div className="Home-characters-card">Characters</div>
             <div className="text-align-center">
-                <p>
-                    {characters.map((character, index) => (
-                        <span key={index} style={{display: "block", margin: "5px 0"}}>
-                            {character} <a href={toURL(character)}>þ</a>
-                        </span>
-                    ))}
-                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", maxWidth: "50%", margin: "0 auto" }}>
+
+                    <p>
+                        {characters.map((character, index) => (
+                            <span key={index} style={{ border: "1px sold #ccc", padding: "5px 10px", borderRadius:"8px"}}>
+                                {character} <a href={toURL(character)}>þ</a>
+                            </span>
+                        ))}
+                    </p>
+                </div>
             </div>
         </div>
     );
