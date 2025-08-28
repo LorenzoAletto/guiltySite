@@ -11,8 +11,8 @@ function App() {
     <div className="bg-gray-400 min-h-screen flex flex-col">
       <Header/>
         <main className="flex-1">
-          <CharactersContainer/>
           <div className="space-y-8">
+            <CharactersContainer/>
             <HeroSlideshow></HeroSlideshow>
           </div>
         </main>
