@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="p-5 bg-gray-800/40 text-center text-sm text-white absolute bottom-0 w-full">
+    <footer className="pb-[60px] pt-5 bg-black text-center text-sm text-white">
       <p>© 2025 Sega. All rights reserved.</p>
     </footer>
   );

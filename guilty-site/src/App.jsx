@@ -1,14 +1,23 @@
 import './index.css'
 import Header from './components/header';
 import Footer from './components/footer';
+import ScrollToTop from './components/scroll-top';
+import HeroSlideshow from './components/home-slideshow';
 import CharactersContainer from './components/characters-container';
+
 
 function App() {
   return (
-    <div className="bg-gray-400 min-h-screen ">
-      <Header/>  
-      <CharactersContainer/>
-      <Footer/> 
+    <div className="bg-gray-400 min-h-screen flex flex-col">
+      <Header/>
+        <main className="flex-1">
+          <CharactersContainer/>
+          <div className="space-y-8">
+            <HeroSlideshow></HeroSlideshow>
+          </div>
+        </main>
+      <Footer/>
+      <ScrollToTop/>
     </div>
   );
 }
